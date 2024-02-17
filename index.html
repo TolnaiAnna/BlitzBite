@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BlitzBite</title>
+ 
+</head>
+<body>
+    <style>
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #271007;
+    margin: 20px;
+    text-align: center;
+    background-image: url('hatter.jpg');
+}
+
+header {
+    background-color: #ffb046;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+section {
+    margin: 20px 0;
+} 
+
+h2 {
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+}
+
+.image-container {
+    display: inline-block;
+    position: relative;
+    width: 639px; 
+    height: 317px; 
+    margin: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-container .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 182, 182);
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+.image-container:hover img {
+    transform: rotateY(180deg);
+}
+
+.image-container:hover .back {
+    transform: rotateY(0deg);
+}
+
+.image-container:hover .front {
+    opacity: 1; 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+footer {
+    background-color: #ffb046;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #35648F;
+}
+.logo{
+    height: 120px;
+    width: 250px;
+}
+
+    </style>
+
+    <header style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+        <h1></h1>
+        <p style="color: black;">"Gyorsétterem a szívünkön, finom falatok a tányéron"</p>
+        <nav>
+            <a href="index.html">Kezdőlap</a>
+            <a href="index2.html">Rendelés</a>
+            <a href="index3.html">Elérhetőségek</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Bemutatkozás</h2>
+        <p>Üdvözöljük weboldalunkon, a BlitzBite-on!</p>
+        <p>A BlitzBite legfőképp a gyorskaják elkészítésével és házhozszállításával foglalkozik.</p>
+        <p>Célunk hogy minél minőségibb és finomabb ételeket készítsünk a vásárlóinknak!</p>
+        <p>Válassza ki kedvenc gyors ételét és egyedi összetevőkkel rendelje meg!</p>
+        <div class="image-container">
+            <div class="front">
+                <p>BlitzBite Gyros - A legjobb választás!</p>
+            </div>
+            <img src="elso.jpg" alt="Gyros 1">
+            <div class="back"></div>
+        </div>
+        <div class="image-container">
+            <div class="front">
+                <p>Kóstolja meg a különleges gyros kínálatunkat!</p>
+            </div>
+            <img src="masodik.jpg" alt="Gyros 2">
+            <div class="back"></div>
+        </div>
+    </section>
+
+    
+    <footer>
+       
+    </footer>
+
+</body>
+</html>

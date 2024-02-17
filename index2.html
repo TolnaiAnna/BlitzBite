@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BlitzBite</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #271007;
+            margin: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffb046;
+            padding: 20px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h3{
+            color: white;
+        }
+
+        h2{
+            color: white;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+
+        section {
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .food-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            background-color: #ffb046;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            max-width: 300px;
+        }
+
+        .food-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+
+        .order-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: #45a049;
+        }
+
+        .order-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            margin-bottom: 10px;
+            text-align: left;
+            color: #271007;
+        }
+
+        .form-input label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input input,
+        .form-input select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        ul{
+            color: #ffffff;
+            text-align: left;
+            max-width: 800px;
+            margin: auto;
+            padding-left: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+        }
+
+        label{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <img src="logo.png" alt="logo" class="logo">
+    </div>
+    <p>"Gyorsétterem a szívünkön, finom falatok a tányéron"</p>
+    <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="index2.html">Rendelés</a>
+        <a href="index3.html">Elérhetőségek</a>
+    </nav>
+</header>
+
+<section>
+
+    <div class="food-item" id="gyrostal">
+        <img src="gyros.png" alt="">
+        <h4>2560ft</h4>
+        <h3>Gyros Tál</h3>
+        <button class="order-button" onclick="showRecommendations('gyrostal')">Megrendelés</button>
+    </div>
+
+    <div class="food-item" id="hamburger">
+        <img src="hambi.jpg" alt="">
+        <h4>2000ft</h4>
+        <h3>Hamburger</h3>
+        <button class="order-button" onclick="showRecommendations('hamburger')">Megrendelés</button>
+    </div>
+
+    <div class="food-item" id="gyroskifli">
+        <img src="gyroskifli.jpg" alt="">
+        <h4>1990ft</h4>
+        <h3>Gyros Kifli</h3>
+        <button class="order-button" onclick="showRecommendations('gyroskifli')">Megrendelés</button>
+    </div>
+
+    <div class="food-item" id="sajtburger">
+        <img src="sajtburger.png" alt="">
+        <h4>2290ft</h4>
+        <h3>Sajtburger</h3>
+        <button class="order-button" onclick="showRecommendations('sajtburger')">Megrendelés</button>
+    </div>
+
+    <div class="food-item" id="pitatal">
+        <img src="pitatal.jpg" alt="">
+        <h4>2500ft</h4>
+        <h3>Pita tál</h3>
+        <button class="order-button" onclick="showRecommendations('pitatal')">Megrendelés</button>
+    </div>
+
+    <div class="food-item" id="gorogtal">
+        <img src="gorogtal.jpg" alt="">
+        <h4>2750ft</h4>
+        <h3>Görög tál</h3>
+        <button class="order-button" onclick="showRecommendations('gorogtal')">Megrendelés</button>
+    </div>
+
+</section>
+
+<h2>Rendelés menete:</h2>
+<ul>
+    <li>Kattints a "Megrendelés" gombra: Válaszd ki a kedvenc ételét a kínálatunkból, majd kattints a "Megrendelés" gombra a kívánt étel mellett.</li>
+    <li>Adatok megadása: Ezután megjelenik egy űrlap, ahol meg kell adnod a nevedet, címedet és telefonszámodat, hogy elküldhesd rendelésedet.</li>
+    <li>Kiegészítők kiválasztása: Válaszd ki, hogy milyen kiegészítőket nem szeretnél a kajádba. Például, ha nem szereted az uborkát vagy a hagymát, egyszerűen válaszd ki azokat a lehetőségeket, amelyeket nem szeretnél.</li>
+    <li>Rendelés elküldése: Ha minden adatot megadtál és kiválasztottad a kiegészítőket, kattints a "Rendelés elküldése" gombra. Ekkor a rendszer fogja fogadni a rendelésedet, és hamarosan felvesszük veled a kapcsolatot a megadott elérhetőségeiden.<h3>A szállítás ingyenes!</h3></li>
+</ul>
+
+<div id="recommendation-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="order-details">
+            <h2 id="selected-food"></h2>
+            <h3>Rendelés adatai</h3>
+            <form id="order-form" onsubmit="submitOrder()">
+                <div class="form-input">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-input">
+                    <label for="address">Cím:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-input">
+                    <label for="phone">Telefonszám:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-input">
+                    <label for="extras">Megjegyzés</label>
+                    <input type="text" id="ne" name="mitne" required>
+                </div>
+
+                <input type="submit" class="submit-button" value="Rendelés elküldése">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showRecommendations(foodId) {
+        var foodItem = document.getElementById(foodId);
+        var foodName = foodItem.querySelector("h3").innerText;
+        document.getElementById("selected-food").innerText = foodName;
+        var modal = document.getElementById("recommendation-modal");
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("recommendation-modal");
+        modal.style.display = "none";
+    }
+
+    function submitOrder() {
+    var name = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var phone = document.getElementById("phone").value;
+    var extras = document.getElementById("ne").value;
+
+    if (name && address && phone) {
+        var message = "Köszönjük, a rendelést megkaptuk\n\n";
+        message += "Név: " + name + "\n";
+        message += "Cím: " + address + "\n";
+        message += "Telefonszám: " + phone + "\n";
+        message += "Megjegyzés: " + extras;
+        alert(message);
+        closeModal();
+    } else {
+        alert("Kérjük, töltse ki az összes mezőt!");
+    }
+    return false;
+}
+
+
+    window.onclick = function (event) {
+        var modal = document.getElementById("recommendation-modal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+</body>
+</html>

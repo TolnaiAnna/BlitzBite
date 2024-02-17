@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlitzBite</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:  #271007;
+            margin: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffb046;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #ffb046;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #23790eea;
+        }
+
+        footer {
+            background-color: #ffb046;
+            padding: 10px;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .logo{
+    height: 120px;
+    width: 250px;
+        }
+
+    p{
+        color:#fff;
+    }
+
+    h2{
+        color: white ;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+        <p style="color: black;">"Gyorsétterem a szívünkön, finom falatok a tányéron"</p>
+        <nav>
+            <a href="index.html">Kezdőlap</a>
+            <a href="index2.html">Rendelés</a>
+            <a href="index3.html">Elérhetőségek</a>
+        </nav>
+    </header>
+
+    <section>
+
+        <h2>Elérhetőségek</h2>
+        <p>Cégünk elérhetőségei:</p>
+        <p><strong>Telefonszám:</strong> +36 1 234 5678</p>
+        <p><strong>E-mail:</strong> info@blitzbite.com</p>
+
+        <h2>Panaszfelvétel</h2>
+        <form id="complaintForm">
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail cím:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="complaint">Panasz vagy Kártérítés:</label>
+            <textarea id="complaint" name="complaint" rows="4" required></textarea>
+
+            <button type="button" onclick="submitComplaint()">Beküldés</button>
+        </form>
+
+        <div id="result"></div>
+    </section>
+
+    <script>
+        function submitComplaint() {
+            document.getElementById('result').innerHTML = "A panaszt/kártérítési kérelmet sikeresen elküldtük. Köszönjük!";
+        }
+    </script>
+</body>
+
+</html>
